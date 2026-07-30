@@ -8,8 +8,42 @@ import Hero from "./components/Hero";
 
 
 export default function Home() {
+  // Structured Data Schema for Person / Software Developer
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Olodude Idowu Okikiola",
+    alternateName: ["DUDEjnr", "Codewithdudejnr"],
+    url: "https://okiki-portfolio.vercel.app",
+    jobTitle: "Full-Stack Web Developer & Automation Engineer",
+    sameAs: [
+      "https://github.com",
+      "https://linkedin.com",
+      "https://x.com",
+    ],
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Workflow Automation",
+      "n8n",
+      "Zapier",
+      "Botpress",
+      "Supabase",
+      "Neon DB",
+    ],
+  };
+
   return (
-    <div className="bg-[#1e1e1f] h-screen">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* Your main layout and tabs components */}
+
+          <div className="bg-[#1e1e1f] h-screen">
       <Navbar />
       <Hero/>
       <About />
@@ -19,5 +53,6 @@ export default function Home() {
    
       <Contact/>
     </div>
+    </>
   );
 }
