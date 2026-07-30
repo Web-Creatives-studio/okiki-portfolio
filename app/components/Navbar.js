@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Slide from './Animations/Slide';
 import { FaUser, FaFileAlt, FaBriefcase, FaCode, FaEnvelope, FaHome } from 'react-icons/fa';
 
 const navItems = [
-  { name: 'Home', href: '#home', icon: FaHome},
+  { name: 'Home', href: '#home', icon: FaHome },
   { name: 'About', href: '#about', icon: FaUser },
   { name: 'Resume', href: '#resume', icon: FaFileAlt },
   { name: 'Work', href: '#projects', icon: FaBriefcase },
@@ -13,55 +14,59 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [activeTab, setActiveTab] = useState('About');
+  const [activeTab, setActiveTab] = useState('Home');
 
   return (
     <>
-      {/*DESKTOP TOP NAVBAR  */}
+      {/* DESKTOP TOP NAVBAR */}
       <header className="hidden md:block fixed top-0 right-0 z-50 p-6">
-        <nav className="bg-primary-darker/80 backdrop-blur-md px-6 py-3 rounded-2xl border border-gray-800 shadow-xl">
-          <ul className="flex space-x-8 text-sm font-medium">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  onClick={() => setActiveTab(item.name)}
-                  className={`transition duration-200 ${
-                    activeTab === item.name
-                      ? 'text-[#ffdb70] border-b-2 border-[#ffdb70] pb-1 font-semibold'
-                      : 'text-text-muted hover:text-[#ffdb70]'
-                  }`}
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Slide direction="down" delay={0.1} width="fit-content">
+          <nav className="bg-[#2b2b2c]/80 backdrop-blur-md px-6 py-3 rounded-2xl border border-[#383838] shadow-xl">
+            <ul className="flex space-x-8 text-sm font-medium">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    onClick={() => setActiveTab(item.name)}
+                    className={`transition duration-200 ${
+                      activeTab === item.name
+                        ? 'text-[#ffdb70] border-b-2 border-[#ffdb70] pb-1 font-semibold'
+                        : 'text-gray-400 hover:text-[#ffdb70]'
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </Slide>
       </header>
 
-      {/*MOBILE BOTTOM NAVBAR*/}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary-darker/95 backdrop-blur-lg border-t border-gray-800 py-2 px-4 shadow-2xl">
-        <div className="flex justify-around items-center">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeTab === item.name;
+      {/* MOBILE BOTTOM NAVBAR */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#1e1e1f]/95 backdrop-blur-lg border-t border-[#383838] py-2 px-2 shadow-2xl">
+        <Slide direction="up" delay={0.1} width="100%">
+          <div className="flex justify-around items-center">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeTab === item.name;
 
-            return (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={() => setActiveTab(item.name)}
-                className={`flex flex-col items-center justify-center w-full py-1 text-xs transition duration-200 ${
-                  isActive ? 'text-accent font-semibold' : 'text-text-muted hover:text-white'
-                }`}
-              >
-                <Icon className={`text-lg mb-1 ${isActive ? 'text-accent' : 'text-text-muted'}`} />
-                <span>{item.name}</span>
-              </a>
-            );
-          })}
-        </div>
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setActiveTab(item.name)}
+                  className={`flex flex-col items-center justify-center w-full py-1 text-[10px] transition duration-200 ${
+                    isActive ? 'text-[#ffdb70] font-semibold' : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <Icon className={`text-base mb-1 ${isActive ? 'text-[#ffdb70]' : 'text-gray-400'}`} />
+                  <span>{item.name}</span>
+                </a>
+              );
+            })}
+          </div>
+        </Slide>
       </nav>
     </>
   );

@@ -3,7 +3,7 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 
-export default function AdminWrap({ children }) {
+export default function Wrap({ children }) {
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-[#1e1e1f] ">
       {/* Sidebar navigation component */}
