@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-10 md:py-18 space-y-8 overflow-hidden">
+    <section id="contact" className="py-20 md:py-18 space-y-8 overflow-hidden">
       {/* SECTION HEADER */}
       <Reveal delay={0.1} width="100%">
         <header className="relative pb-3 border-b border-[#383838]">

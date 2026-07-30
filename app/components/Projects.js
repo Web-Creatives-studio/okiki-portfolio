@@ -11,7 +11,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="py-10 md:py-18 bg-[#1e1e1f] space-y-10 overflow-hidden">
+    <section id="projects" className="py-20 md:py-18 bg-[#1e1e1f] space-y-10 overflow-hidden">
       {/* SECTION HEADER */}
       <Reveal delay={0.1} width="100%">
         <header className="relative pb-3 border-b border-[#383838]">

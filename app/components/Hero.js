@@ -21,7 +21,7 @@ import {
 
 export default function Hero() {
   const roles = [
-    "Full-Stack Web Developer",
+    "Frontend Developer",
     "Workflow Automation Engineer",
     "Conversational AI Specialist",
   ];
@@ -60,7 +60,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="py-10 md:py-40 bg-[#1e1e1f] p-6 md:p-10 overflow-hidden"
+      className="py-20 md:py-40 bg-[#1e1e1f] p-6 md:p-10 overflow-hidden"
     >
       {/* 2-COLUMN GRID (LEFT vs RIGHT) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -112,7 +112,7 @@ export default function Hero() {
             <div className="grid grid-cols-2 gap-3 text-xs text-gray-300 font-mono">
               <div className="flex items-center space-x-2 bg-[#2b2b2c] p-2.5 rounded-xl border border-[#383838]">
                 <FaCheckCircle className="text-[#ffdb70] text-sm flex-shrink-0" />
-                <span>Full-Stack Web Dev</span>
+                <span>Frontend Developer</span>
               </div>
               <div className="flex items-center space-x-2 bg-[#2b2b2c] p-2.5 rounded-xl border border-[#383838]">
                 <FaCheckCircle className="text-[#ffdb70] text-sm flex-shrink-0" />

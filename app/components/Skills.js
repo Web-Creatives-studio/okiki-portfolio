@@ -53,7 +53,7 @@ function AnimatedCounter({ targetValue, isParentInView, delay = 0 }) {
       }, incrementTime);
 
       return () => clearInterval(timer);
-    }, delay * 1000);
+    }, delay * 3000);
 
     return () => clearTimeout(startDelayTimer);
   }, [isParentInView, targetValue, delay]);
@@ -105,7 +105,7 @@ export default function ResumeTab() {
   ];
 
   return (
-    <section id="skills" className="space-y-10 py-10 md:py-18 overflow-hidden" ref={containerRef}>
+    <section id="skills" className="space-y-10 py-20 md:py-18 overflow-hidden" ref={containerRef}>
       {/* SECTION HEADER */}
       <Reveal delay={0.1} width="100%">
         <header className="relative pb-3 border-b border-[#383838]">

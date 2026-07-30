@@ -14,7 +14,7 @@ export default function About() {
   const services = [
     {
       icon: FaCode,
-      title: 'Full-Stack Web Development',
+      title: 'Frontend Developer',
       desc: 'Building responsive web applications using React JS, Next.js, HTML, CSS, Bootstrap, and Tailwind CSS.',
     },
     {
@@ -35,7 +35,7 @@ export default function About() {
   ];
 
   return (
-    <section id='about' className="space-y-8 py-10 md:py-18 overflow-hidden">
+    <section id='about' className="space-y-8 py-20 md:py-18 overflow-hidden">
       {/* HEADER SECTION */}
       <Reveal delay={0.1} width="100%">
         <header className="relative pb-3 border-b border-[#383838]">

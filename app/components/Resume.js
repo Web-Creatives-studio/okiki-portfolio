@@ -20,17 +20,17 @@ export default function Resume() {
     },
   ];
 
-  const education = [
+const education = [
     {
-      degree: "Microbiology (Undergraduate)",
+      degree: "Agricultural & Environmental Engineering (Undergraduate)",
       timeline: "In Progress",
       description:
-        "Applying logical analysis and system architectures to technical web engineering and automation projects.",
+        "Applying analytical problem-solving, structural logic, and system architecture to full-stack web engineering and workflow automation projects.",
     },
   ];
 
   return (
-    <section id="resume" className="space-y-10 py-10 md:py-18">
+    <section id="resume" className="space-y-10 py-20 md:py-18">
       {/* SECTION HEADER */}
       <Reveal delay={0.1} width="100%">
         <header className="relative pb-3 border-b border-[#383838]">
