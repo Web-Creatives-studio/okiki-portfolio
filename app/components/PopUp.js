@@ -13,7 +13,7 @@ export default function PopUp({ setPopup, selectedProject }) {
     >
       {/* FIXED CONTAINER: No scrollbars, strict height boundary */}
       <div 
-        className="bg-[#1e1e1f] border border-[#383838] w-full max-w-5xl h-full max-h-[90vh] rounded-3xl p-4 sm:p-6 relative overflow-hidden shadow-2xl flex flex-col justify-between text-white"
+        className="bg-[#1e1e1f] border border-[#383838] w-full max-w-5xl h-full max-h-[98vh] rounded-3xl p-4 sm:p-6 relative overflow-hidden shadow-2xl flex flex-col justify-between text-white"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -70,7 +70,7 @@ export default function PopUp({ setPopup, selectedProject }) {
           </div>
 
           {/* MOBILE PREVIEW */}
-          <div className="lg:col-span-4 h-full flex flex-col justify-center items-center overflow-hidden hidden sm:flex">
+          <div className="lg:col-span-4 h-full flex flex-col justify-center items-center overflow-hidden  sm:flex">
             <div className="flex items-center space-x-2 text-[11px] text-gray-400 font-mono mb-1 flex-shrink-0">
               <FaMobileAlt className="text-[#ffdb70]" />
               <span>Mobile View</span>

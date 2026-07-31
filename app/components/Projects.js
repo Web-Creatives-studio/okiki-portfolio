@@ -5,10 +5,14 @@ import Reveal from "./Animations/Reveal";
 import Slide from "./Animations/Slide";
 import { projectData } from "../data/projectData";
 import PopUp from "./PopUp";
+import Preview from "../portfolio/[title]/page";
+import { useRouter } from "next/navigation";
 
 export default function Projects() {
+  const router = useRouter();
   const [popUp, setPopup] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [preview, setPreview] = useState(null)
 
   return (
     <section id="projects" className="py-20 md:py-18 bg-[#1e1e1f] space-y-10 overflow-hidden">
@@ -77,8 +81,10 @@ export default function Projects() {
 
                         <button
                           onClick={() => {
-                            setPopup(true);
-                            setSelectedProject(project);
+                            //setPopup(true);
+                            //setPreview(true)
+                            router.push(`/preview/${project.slug}`)
+                            //setSelectedProject(project);
                           }}
                           className="text-[#ffdb70] text-xs font-semibold py-2.5 px-5 rounded-xl border border-[#ffdb70] cursor-pointer hover:bg-[#ffdb70] hover:text-[#121212] transition"
                         >
@@ -96,6 +102,9 @@ export default function Projects() {
 
       {popUp && (
         <PopUp setPopup={setPopup} selectedProject={selectedProject} />
+      )}
+      {preview && (
+        <Preview setPreveiew={setPreview} selectedProject={selectedProject} />
       )}
     </section>
   );

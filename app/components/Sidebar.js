@@ -149,7 +149,7 @@ export default function Sidebar() {
             <FaLinkedin size={18} />
           </a>
           <a
-            href="https://x.com"
+            href="https://twitter.com/OlodudeIdowu"
             target="_blank"
             rel="noreferrer"
             aria-label="Twitter"
@@ -158,7 +158,7 @@ export default function Sidebar() {
             <FaTwitter size={18} />
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://tiktok.com/codewithdudejnr"
             target="_blank"
             rel="noreferrer"
             aria-label="TikTok"

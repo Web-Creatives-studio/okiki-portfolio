@@ -14,10 +14,28 @@ import {
 const navItems = [
   { id: 1, name: "Home", href: "#home", sectionId: "home", icon: FaHome },
   { id: 2, name: "About", href: "#about", sectionId: "about", icon: FaUser },
-  { id: 3, name: "Resume", href: "#resume", sectionId: "resume", icon: FaFileAlt },
-  { id: 4, name: "Work", href: "#projects", sectionId: "projects", icon: FaBriefcase },
-  { id: 5, name: "Skills", href: "#skills", sectionId: "skills", icon: FaCode },
-  { id: 6, name: "Contact", href: "#contact", sectionId: "contact", icon: FaEnvelope },
+  {
+    id: 3,
+    name: "Resume",
+    href: "#resume",
+    sectionId: "resume",
+    icon: FaFileAlt,
+  },
+  { id: 4, name: "Skills", href: "#skills", sectionId: "skills", icon: FaCode },
+  {
+    id: 5,
+    name: "Work",
+    href: "#projects",
+    sectionId: "projects",
+    icon: FaBriefcase,
+  },
+  {
+    id: 6,
+    name: "Contact",
+    href: "#contact",
+    sectionId: "contact",
+    icon: FaEnvelope,
+  },
 ];
 
 export default function Navbar() {
@@ -42,7 +60,7 @@ export default function Navbar() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const matchedItem = navItems.find(
-            (item) => item.sectionId === entry.target.id
+            (item) => item.sectionId === entry.target.id,
           );
           if (matchedItem) {
             setActiveTab(matchedItem.name);
@@ -62,31 +80,33 @@ export default function Navbar() {
     <>
       {/* Mobile Top Header Bar */}
       <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-[#1e1e1f]/90 border-b border-[#383838] px-4 flex items-center justify-between z-40 backdrop-blur-md">
-  {/* Logo Brand */}
-  <div className="flex items-center space-x-2">
-    <span className="text-xl font-black tracking-widest text-[#ffdb70] uppercase font-mono">
-      DUDE
-    </span>
-    <span className="text-[10px] font-mono text-gray-400 border-l border-[#383838] pl-2 hidden sm:inline-block">
-      dev.okikiola
-    </span>
-  </div>
+        {/* Logo Brand */}
+        <div className="flex items-center space-x-2">
+          <span className="text-xl font-black tracking-widest text-[#ffdb70] uppercase font-mono">
+            DUDE
+          </span>
+          <span className="text-[10px] font-mono text-gray-400 border-l border-[#383838] pl-2 hidden sm:inline-block">
+            dev.okikiola
+          </span>
+        </div>
 
-  {/* Status & Quick Action Button */}
-  <div className="flex items-center space-x-3">
-    <div className="flex items-center space-x-1.5 bg-[#2b2b2c] px-2.5 py-1 rounded-full border border-[#383838]">
-      <span className="w-2 h-2 rounded-full bg-[#ffdb70] animate-pulse" />
-      <span className="text-[10px] font-semibold text-[#ffdb70]">Open to work</span>
-    </div>
+        {/* Status & Quick Action Button */}
+        <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-1.5 bg-[#2b2b2c] px-2.5 py-1 rounded-full border border-[#383838]">
+            <span className="w-2 h-2 rounded-full bg-[#ffdb70] animate-pulse" />
+            <span className="text-[10px] font-semibold text-[#ffdb70]">
+              Open to work
+            </span>
+          </div>
 
-    <a
-      href="#contact"
-      className="bg-[#ffdb70] text-[#121212] text-xs font-bold px-3 py-1.5 rounded-xl hover:bg-opacity-90 transition shadow-sm"
-    >
-      Hire Me
-    </a>
-  </div>
-</div>
+          <a
+            href="#contact"
+            className="bg-[#ffdb70] text-[#121212] text-xs font-bold px-3 py-1.5 rounded-xl hover:bg-opacity-90 transition shadow-sm"
+          >
+            Hire Me
+          </a>
+        </div>
+      </div>
 
       {/* DESKTOP TOP NAVBAR */}
       <header className="hidden md:block fixed top-0 right-0 z-50 p-6">

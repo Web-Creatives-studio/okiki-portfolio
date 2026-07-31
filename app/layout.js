@@ -1,21 +1,28 @@
 import "./globals.css";
 import Wrap from "./components/Wrap";
 
+// 1. VIEWPORT EXPORT (Fixes the themeColor warning)
+export const viewport = {
+  themeColor: "#121212",
+  width: "device-width",
+  initialScale: 1,
+};
+
+// 2. METADATA EXPORT (Without themeColor)
 export const metadata = {
-  // Title template keeps pages consistent
   title: {
     default:
-      "Olodude Idowu Okikiola | Full-Stack Developer & Automation Specialist",
+      "Olodude Idowu Okikiola | Frontend Web Developer & Automation Specialist",
     template: "%s | Olodude Idowu Okikiola",
   },
   description:
-    "Portfolio of Olodude Idowu Okikiola (DUDEjnr) — Full-Stack Web Developer, Workflow Automation Engineer, and Chatbot Specialist based in Lagos, Nigeria. Specializing in Next.js, React, Supabase, n8n, Botpress, and Zapier.",
+    "Portfolio of Olodude Idowu Okikiola (DUDEjnr) — Frontend Web Developer, Workflow Automation Engineer, and Chatbot Specialist based in Lagos, Nigeria. Specializing in Next.js, React, Supabase, n8n, Botpress, and Zapier.",
 
   keywords: [
     "Olodude Idowu Okikiola",
     "DUDEjnr",
     "Codewithdudejnr",
-    "Full-Stack Developer Nigeria",
+    "Frontend Web Developer Nigeria",
     "Next.js Developer Lagos",
     "Workflow Automation Engineer",
     "n8n Specialist",
@@ -34,7 +41,6 @@ export const metadata = {
   creator: "Olodude Idowu Okikiola",
   publisher: "Olodude Idowu Okikiola",
 
-  // Indexing directives for search engines
   robots: {
     index: true,
     follow: true,
@@ -47,25 +53,41 @@ export const metadata = {
     },
   },
 
-  // Favicon and App Icon Declarations
+  // Favicons configuration
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [
+      { url: "/apple-icon.png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "android-chrome-192x192",
+        url: "/android-chrome-192x192.png",
+      },
+      {
+        rel: "android-chrome-512x512",
+        url: "/android-chrome-512x512.png",
+      },
+    ],
   },
 
-  // Open Graph (WhatsApp, LinkedIn, Facebook Link Previews)
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://okiki-portfolio.vercel.app", // Replace with your deployed URL
+    url: "https://okiki-portfolio.vercel.app",
     title: "Olodude Idowu Okikiola | Web & Automation Engineer",
     description:
       "Building scalable web platforms, automated workflow pipelines, and intelligent chatbots with Next.js, React, n8n, and Botpress.",
     siteName: "Olodude Okikiola Portfolio",
     images: [
       {
-        url: "https://yourportfolio.com/og-image.png", // Image shown when sharing link on WhatsApp/LinkedIn (1200x630)
+        url: "https://okiki-portfolio.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Olodude Idowu Okikiola Portfolio Banner",
@@ -73,18 +95,14 @@ export const metadata = {
     ],
   },
 
-  // Twitter Card Meta
   twitter: {
     card: "summary_large_image",
-    title: "Olodude Idowu Okikiola | Full-Stack & Automation Specialist",
+    title: "Olodude Idowu Okikiola | Frontend Developer & Automation Specialist",
     description:
       "I engineer web platforms, build automated workflow pipelines, and develop intelligent chatbots.",
-    creator: "@Codewithdudejnr", // Your Twitter/X handle if applicable
-    images: ["https://okiki-portfolio.vercel.app"],
+    creator: "@Codewithdudejnr",
+    images: ["https://okiki-portfolio.vercel.app/og-image.png"],
   },
-
-  // Browser Address Bar Theme Color matching your accent
-  themeColor: "#121212",
 };
 
 export default function RootLayout({ children }) {

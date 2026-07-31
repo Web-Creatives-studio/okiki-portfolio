@@ -6,6 +6,7 @@ import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import ScrollKit from "./components/ScrollKit";
+import FAQ from "./components/FAQ";
 
 export default function Home() {
   // Structured Data Schema for Person / Software Developer
@@ -45,9 +46,9 @@ export default function Home() {
         <Hero />
         <About />
         <Resume />
-        <Projects />
         <Skills />
-
+        <Projects />
+        <FAQ />
         <Contact />
       </div>
     </>
