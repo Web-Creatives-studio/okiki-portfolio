@@ -97,7 +97,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Olodude Idowu Okikiola | Frontend Developer & Automation Specialist",
+    title:
+      "Olodude Idowu Okikiola | Frontend Developer & Automation Specialist",
     description:
       "I engineer web platforms, build automated workflow pipelines, and develop intelligent chatbots.",
     creator: "@Codewithdudejnr",
@@ -107,7 +108,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    // app/layout.js
+    <html
+      lang="en"
+      className="dark scroll-smooth"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <body className="bg-[#121212] text-white antialiased">
         <Wrap>{children}</Wrap>
       </body>

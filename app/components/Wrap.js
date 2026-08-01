@@ -5,23 +5,27 @@ import Sidebar from "./Sidebar";
 
 export default function Wrap({ children }) {
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-[#1e1e1f] ">
+    <div className="flex h-dvh w-screen overflow-hidden bg-[#1e1e1f] select-none">
       {/* Sidebar navigation component */}
       <Sidebar />
 
+      {/* Main Content Viewport */}
       <main
-        className={`
+        className="
           flex-1 
           h-full 
           overflow-y-auto 
-          px-4 md:px-6 lg:px-8 
-          pt-20 lg:pt-0
-        
+          scroll-smooth 
+          px-4 sm:px-6 md:px-8 lg:px-10 
+          pt-0 lg:pt-6 
+          pb-10
           transition-all duration-300 ease-in-out
-          
-        `}
+          [scrollbar-width:thin] [scrollbar-color:#383838_#121212]
+        "
       >
-        {children}
+        <div className="max-w-7xl mx-auto w-full">
+          {children}
+        </div>
       </main>
     </div>
   );

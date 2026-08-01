@@ -16,10 +16,34 @@ import {
 } from "react-icons/fa";
 
 const socialLinks = [
-  { id: 1, value:"+234 807 560 8069", label: "WhatsApp", href: "tel:+2348075608069", icon: FaWhatsapp },
-  { id: 2, value:"codewithdudejnr", label: "TikTok", href: "https://www.tiktok.com/@codewithdudejnr", icon: FaTiktok },
-  { id: 3, value:"OlodudeIdowu", label: "Twitter", href: "https://twitter.com/OlodudeIdowu", icon: FaTwitter },
-  { id: 4, value:"olodudeokiki@gmail.com", label: "Mail", href: "mailto:olodudeokiki@gmail.com", icon: FaEnvelope },
+  {
+    id: 1,
+    value: "+234 807 560 8069",
+    label: "WhatsApp",
+    href: "tel:+2348075608069",
+    icon: FaWhatsapp,
+  },
+  {
+    id: 2,
+    value: "codewithdudejnr",
+    label: "TikTok",
+    href: "https://www.tiktok.com/@codewithdudejnr",
+    icon: FaTiktok,
+  },
+  {
+    id: 3,
+    value: "OlodudeIdowu",
+    label: "Twitter",
+    href: "https://twitter.com/OlodudeIdowu",
+    icon: FaTwitter,
+  },
+  {
+    id: 4,
+    value: "olodudeokiki@gmail.com",
+    label: "Mail",
+    href: "mailto:olodudeokiki@gmail.com",
+    icon: FaEnvelope,
+  },
 ];
 
 export default function Contact() {
@@ -123,6 +147,7 @@ export default function Contact() {
               ref={formRef}
               onSubmit={sendEmail}
               className="bg-[#2b2b2c] p-6 md:p-8 rounded-3xl border border-[#383838] shadow-2xl space-y-4"
+              suppressHydrationWarning
             >
               <h3 className="text-xl font-bold text-white mb-2">
                 Send Me a Message
