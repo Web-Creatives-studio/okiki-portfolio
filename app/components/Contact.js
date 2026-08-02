@@ -20,7 +20,7 @@ const socialLinks = [
     id: 1,
     value: "+234 807 560 8069",
     label: "WhatsApp",
-    href: "tel:+2348075608069",
+    href:"https://wa.me/2348075608069",
     icon: FaWhatsapp,
   },
   {

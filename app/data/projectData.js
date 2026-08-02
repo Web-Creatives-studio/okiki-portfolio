@@ -198,7 +198,7 @@ Key Features & Business Impact:
     code: "#",
     demo: "#",
     image: "/image.png",
-    desktop: "/video/project-tailor.mp4",
+    desktop: "/video/project-catalogue.MOV",
     mobile: "/video/mobile-project-tailor.mp4",
     details: `The Challenge:
 Fashion designers and tailors waste substantial time back-and-forth over messaging apps sharing style photos, negotiating prices, and clarifying customer measurement specifications.

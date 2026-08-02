@@ -17,7 +17,7 @@ export default function Wrap({ children }) {
           overflow-y-auto 
           scroll-smooth 
           px-4 sm:px-6 md:px-8 lg:px-10 
-          pt-0 lg:pt-6 
+          pt-0 lg:pt-0
           pb-10
           transition-all duration-300 ease-in-out
           [scrollbar-width:thin] [scrollbar-color:#383838_#121212]

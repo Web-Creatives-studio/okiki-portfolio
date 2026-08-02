@@ -1,5 +1,6 @@
 import "./globals.css";
 import Wrap from "./components/Wrap";
+import ChatBot from "./components/ChatBot";
 
 // 1. VIEWPORT EXPORT (Fixes the themeColor warning)
 export const viewport = {
@@ -116,7 +117,10 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body className="bg-[#121212] text-white antialiased">
-        <Wrap>{children}</Wrap>
+        <Wrap>
+          <main>{children}</main>
+        </Wrap>
+        <ChatBot />
       </body>
     </html>
   );

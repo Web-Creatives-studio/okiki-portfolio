@@ -1,3 +1,6 @@
+
+import ChatBot from "./components/ChatBot";
+
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -9,6 +12,7 @@ import ScrollKit from "./components/ScrollKit";
 import FAQ from "./components/FAQ";
 
 export default function Home() {
+
   // Structured Data Schema for Person / Software Developer
   const jsonLd = {
     "@context": "https://schema.org",
@@ -41,6 +45,7 @@ export default function Home() {
       {/* Your main layout and tabs components */}
 
       <div className="bg-[#1e1e1f] h-screen">
+   
         <ScrollKit />
         <Navbar />
         <Hero />
@@ -51,6 +56,8 @@ export default function Home() {
         <FAQ />
         <Contact />
       </div>
+<ChatBot/>
+   
     </>
   );
 }
