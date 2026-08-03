@@ -2,8 +2,6 @@ import "./globals.css";
 import Wrap from "./components/Wrap";
 import ChatBot from "./components/ChatBot";
 
-<meta name="google-site-verification" content="2sHjX92LwAGYnr7K17IPMGa_mZpMknN3ru68IYbDwjc" />
-
 // 1. VIEWPORT EXPORT (Fixes the themeColor warning)
 export const viewport = {
   themeColor: "#121212",
@@ -118,6 +116,13 @@ export default function RootLayout({ children }) {
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
+      <head>
+        <meta
+          name="google-site-verification"
+          content="2sHjX92LwAGYnr7K17IPMGa_mZpMknN3ru68IYbDwjc"
+        />
+      </head>
+
       <body className="bg-[#121212] text-white antialiased">
         <Wrap>
           <main>{children}</main>
