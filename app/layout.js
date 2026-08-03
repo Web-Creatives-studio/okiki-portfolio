@@ -2,14 +2,12 @@ import "./globals.css";
 import Wrap from "./components/Wrap";
 import ChatBot from "./components/ChatBot";
 
-// 1. VIEWPORT EXPORT (Fixes the themeColor warning)
 export const viewport = {
   themeColor: "#121212",
   width: "device-width",
   initialScale: 1,
 };
 
-// 2. METADATA EXPORT (Without themeColor)
 export const metadata = {
   title: {
     default:
@@ -17,7 +15,7 @@ export const metadata = {
     template: "%s | Olodude Idowu Okikiola",
   },
   description:
-    "Portfolio of Olodude Idowu Okikiola (DUDEjnr) — Frontend Web Developer, Workflow Automation Engineer, and Chatbot Specialist based in Lagos, Nigeria. Specializing in Next.js, React, Supabase, n8n, Botpress, and Zapier.",
+    "Portfolio of Olodude Idowu Okikiola (DUDEjnr) — Frontend Web Developer, Workflow Automation Engineer, and Chatbot Specialist based in Lagos, Nigeria.",
 
   keywords: [
     "Olodude Idowu Okikiola",
@@ -29,8 +27,6 @@ export const metadata = {
     "n8n Specialist",
     "Botpress Chatbot Developer",
     "Zapier Automation Specialist",
-    "Web Developer Lagos",
-    "React Developer",
   ],
 
   authors: [
@@ -41,6 +37,11 @@ export const metadata = {
   ],
   creator: "Olodude Idowu Okikiola",
   publisher: "Olodude Idowu Okikiola",
+
+  // NEXT.JS NATIVE VERIFICATION
+  verification: {
+    google: "2sHjX92LwAGYnr7K17IPMGa_mZpMknN3ru68IYbDwjc",
+  },
 
   robots: {
     index: true,
@@ -54,7 +55,6 @@ export const metadata = {
     },
   },
 
-  // Favicons configuration
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -84,7 +84,7 @@ export const metadata = {
     url: "https://okiki-portfolio.vercel.app",
     title: "Olodude Idowu Okikiola | Web & Automation Engineer",
     description:
-      "Building scalable web platforms, automated workflow pipelines, and intelligent chatbots with Next.js, React, n8n, and Botpress.",
+      "Building scalable web platforms, automated workflow pipelines, and intelligent chatbots.",
     siteName: "Olodude Okikiola Portfolio",
     images: [
       {
@@ -109,20 +109,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // app/layout.js
     <html
       lang="en"
       className="dark scroll-smooth"
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <head>
-        <meta
-          name="google-site-verification"
-          content="2sHjX92LwAGYnr7K17IPMGa_mZpMknN3ru68IYbDwjc"
-        />
-      </head>
-
       <body className="bg-[#121212] text-white antialiased">
         <Wrap>
           <main>{children}</main>
