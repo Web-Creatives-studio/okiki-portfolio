@@ -1,6 +1,5 @@
 "use client";
-import Reveal from "./Animations/Reveal";
-import Slide from "./Animations/Slide";
+
 
 import React, { useState, useRef, useEffect } from "react";
 import { FiSend, FiX, FiMinus } from "react-icons/fi";
@@ -12,7 +11,7 @@ export default function ChatBot() {
   const [messageInput, setMessageInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
-  // Quick suggestion chips
+
 const quickQuestions = [
     "Pricing Plans?",
     "E-commerce Pricing",
@@ -28,11 +27,11 @@ const quickQuestions = [
     },
   ]);
 
-  // Conversational response generator with social & contact links
+
   const generateBotResponse = (userInput) => {
     const input = userInput.toLowerCase();
 
-    // CONTACT & SOCIAL DETAILS
+
     if (
       input.includes("contact") ||
       input.includes("mail") ||
