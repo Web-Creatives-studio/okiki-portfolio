@@ -170,11 +170,11 @@ Key Features & Business Impact:
     slug: "voting-platform",
     description:
       "A tamper-proof digital voting application designed for organizational, institutional, and association elections with transparent audit trails.",
-    tech: ["Next.js", "Supabase", "TailwindCSS", "Neon DB"],
+    tech: ["Next.js", "SQlite", "TailwindCSS", "Prisma"],
     code: "#",
     demo: "#",
-    image: "/project-voting.jpg",
-    desktop: "/video/project-voting.mp4",
+    image: "/project-voting.png",
+    desktop: "/video/project-voting.MOV",
     mobile: "/video/mobile-project-voting.mp4",
     details: `The Challenge:
 Traditional paper or unverified online elections are prone to vote manipulation, duplicate submissions, long manual counting delays, and voter mistrust.
@@ -197,9 +197,9 @@ Key Features & Business Impact:
     tech: ["Next.js", "TailwindCSS", "Neon DB"],
     code: "#",
     demo: "#",
-    image: "/image.png",
+    image: "/project-catalogue.png",
     desktop: "/video/project-catalogue.MOV",
-    mobile: "/video/mobile-project-tailor.mp4",
+    mobile: "/video/mobile-project-catalogue.MOV",
     details: `The Challenge:
 Fashion designers and tailors waste substantial time back-and-forth over messaging apps sharing style photos, negotiating prices, and clarifying customer measurement specifications.
 
